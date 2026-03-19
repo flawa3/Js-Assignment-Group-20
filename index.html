@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom OnlineStore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">Blossom OnlineStore</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="cart.html" class="nav-link">Cart <span class="badge" id="cartBadge">0</span></a>
+                <a href="checkout.html" class="nav-link">Checkout</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="main">
+        <div class="container">
+            <section class="search-section">
+                <input 
+                    type="text" 
+                    id="searchBox" 
+                    class="search-input" 
+                    placeholder="Search products..."
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </section>
+            <section class="filter-section">
+                <label for="categoryFilter">Filter by Category:</label>
+                <select id="categoryFilter" class="filter-select">
+                    <option value="">All Products</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Books">Books</option>
+                </select>
+            </section>
+            <section class="products-section">
+                <h1 class="section-title">Our Products</h1>
+                <div class="products-grid" id="productsGrid">
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Blossom OnlineStore. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

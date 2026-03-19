@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo"> Blossom OnlineStore</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cart.html" class="nav-link">Cart <span class="badge" id="cartBadge">0</span></a>
+                <a href="checkout.html" class="nav-link active">Checkout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="checkout-wrapper">
+                <!-- Checkout Form -->
+                <div class="checkout-form-section">
+                    <h1>Checkout</h1>
+
+                    <!-- Error Messages -->
+                    <div id="errorMessages" class="error-messages" style="display: none;">
+                        <h4>Please fix the following errors:</h4>
+                        <ul id="errorList"></ul>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <h4>✓ Order Placed Successfully!</h4>
+                        <p>Thank you for your purchase.</p>
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    </div>
+
+                    <!-- Checkout Form -->
+                    <form id="checkoutForm" class="checkout-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Place Order</button>
+                        <a href="cart.html" class="btn btn-secondary">Back to Cart</a>
+                    </form>
+                </div>
+                <div class="order-summary-section">
+                    <h2>Order Summary</h2>
+                    <div id="orderItems" class="order-items">
+                    </div>
+                    <div class="summary-box">
+                        <div class="summary-item">
+                            <span>Subtotal:</span>
+                            <span id="orderSubtotal">shs0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tax (10%):</span>
+                            <span id="orderTax">shs0.00</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="orderTotal">shs0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Blossom onlineStore. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

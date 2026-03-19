@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">Blossom OnlineStore</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cart.html" class="nav-link active">Cart <span class="badge" id="cartBadge">0</span></a>
+                <a href="checkout.html" class="nav-link">Checkout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+
+            <!-- Empty Cart Message -->
+            <div id="emptyCart" class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="index.html" class="btn-link">Continue Shopping</a>
+            </div>
+
+            <!-- Cart Items Table -->
+            <div id="cartContent" class="cart-content" style="display: none;">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        <!-- Cart items will be loaded here -->
+                    </tbody>
+                </table>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="subtotalAmount">shs0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax (10%):</span>
+                        <span id="taxAmount">shs0.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span id="totalAmount">shs0.00</span>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+                    <a href="index.html" class="btn btn-secondary">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Blossom OnlineStore All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
